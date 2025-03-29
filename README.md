@@ -10,4 +10,4 @@ Bu proje, modern ve şık bir Coffee Shop web sitesi tasarımıdır. HTML, CSS v
  GIF Desteği ile dinamik içerik
 
 #Görseller 
-![ezgif-coffeeshop](https://github.com/user-attachments/assets/ccd5a234-2412-481b-b125-3a3528079d82)
+![coffee shop](https://github.com/user-attachments/assets/9260ca3d-f714-45eb-8640-ac886b74b415)
