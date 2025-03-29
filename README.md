@@ -12,3 +12,4 @@ Bu proje, modern ve şık bir Coffee Shop web sitesi tasarımıdır. HTML, CSS v
 #Görseller 
 
 
+![EkranKayd2025-03-3000 38 13-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9a36cd60-dd2c-4ad9-9020-a19146776463)
