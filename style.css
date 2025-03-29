@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* css resetleme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* verilen margin ve paddin gerğerlerinden dolayı dışa veya içe doğru genişlemeyi önleyip kendi içinde bu işlemi yapmaya yarar */
+    border: none;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: 0.2s linear all;
+
+}
+
+/* root alanı tanımala */
+:root {
+    --main-color: #d3ad7f;
+    --black-color: #13131a;
+    --bg-color: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: "Roboto" sans-serif;
+
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* rem değerini 10px olacak şekilde ayarlayacağız. 1 rem in 10 px olması için 62.5%şeklinde tanımlanmış olması lazım font-size ların */
+    font-size: 62.5%;
+}
+
+/* Çıkan scrolbarın kapladığı alan */
+html::-webkit-scrollbar {
+    width: 0.2rem;
+
+}
+
+/* scrolbarın arkaplan rengi */
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* scrolbarın çucuk düzeni */
+html::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    scale: 1.1;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-bottom: 4rem;
+
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+/* header başlangıç */
+header {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 6%;
+    border-bottom: var(--border);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+}
+
+header .icons {
+     display: none;
+}
+
+header .logo img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.6rem;
+    margin: 0 1rem;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+header .icons i {
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+
+}
+
+.home {
+    min-height: 100vh;
+    background-image: url(images/home.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10vw;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+    color: rgba(240, 248, 255, 0.6);
+    /* color: aliceblue; burada işe yaramadı */
+}
+
+/* about başlangıç */
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* about bitiş */
+/* our menu başlangıç */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1rem;
+}
+
+.menu .box {
+    border: var(--border);
+    text-align: center;
+    padding: 5rem;
+    transition: all .4s;
+}
+.menu .box:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.menu .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.menu .box h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.menu .box .price{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+.menu .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+/* product başlangıç */
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+
+}
+.products .product-box .image{
+    padding: 2rem 0;
+}
+.products .product-box .image img{
+    right: 25rem;
+    width: 25rem;
+}
+.products .product-box{
+    border: var(--border);
+    text-align: center;
+    padding: 2rem;
+
+}
+
+.products .product-box .content h3{
+    font-size: 2.5rem;
+}
+.products .product-box .content .stars{
+    padding: 1.5rem;
+}
+.products .product-box .content .stars i{
+    color:var(--main-color);
+    font-size: 1.7rem;
+}
+.products .product-box .content .price{
+    font-size: 2.5rem;
+}
+.products .product-box .content .price span{ /* lighter özelliği çalışmıyor??? */
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+/* prodct bitiş */
+/* reviews başlangıç */
+
+.reciews .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+
+}
+.reciews .box-container .box{
+    border: var(--border);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.reciews .box-container .box img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+.reciews .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: gainsboro;
+    padding: 2rem 0;
+}
+.reciews .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+.reciews .box i{
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+/* contact başlangıç */
+.contact .row{
+    display: flex;
+    background-color: var(--black-color);
+   flex-wrap: wrap;
+   gap: 1rem;
+   
+}
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contact .row form{
+flex: 1 1 45rem;
+padding: 5rem 2rem;
+}
+.contact .row form h3{
+    text-transform:uppercase ;
+    font-size: 3.5rem;
+
+}
+.contact .row form .input-box{
+   display: flex;
+   align-items: center; 
+   margin: 2rem 0 2rem;
+   background: var(--black-color);
+   border: var(--border);
+}
+.contact .row form .input-box span{
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.contact .row form .input-box input{
+    width: 100%;
+    background: none;
+    padding: 2rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    color: #ffff;
+}
+.contact .row form .btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.contact .row form .btn-container .btn{
+    width: 200px;
+}
+/* contact bittiş */
+/* bloks başlangıç */
+
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.blogs .box-container .box{
+    border: var(--border);
+}
+.blogs .box-container .box .image{
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+.blogs .box-container .box:hover .image img{
+    transform: scale(1,2);
+}
+.blogs .box-container .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogs .box-container .box .content{
+    padding: 2rem;
+}
+.blogs .box-container .box .content .title{
+    color: #ffff;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+}
+.blogs .box-container .box .content .title:hover{
+    color: var(--main-color);
+}
+.blogs .box-container .box .content span{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--main-color);
+}
+.blogs .box-container .box .content p{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #ccc;
+    padding: 1rem 0;
+}
+
+    
+
+/* blogs bitiş */
+/* footer başlangıç */
+footer{
+    background: var(--black-color);
+    text-align: center;
+}
+.share{
+    padding: 1rem 0;
+}
+.share i{
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    border-radius: 50%;
+    line-height: 5rem;
+    margin: .3rem;
+
+/* font-size: 2rem;
+padding: 1rem;
+margin: 1rem;
+border: var(--border);
+border-radius: 50%; */
+
+}
+.share i:hover{
+    background-color: var(--main-color);
+}
+footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+
+}
+footer .links a{
+    font-size: 2rem;
+    color:#ffff;
+    border: var(--border);
+    padding: 0.7rem 2rem;
+
+}
+footer .links a:hover{
+    background-color: var(--main-color);
+}
+footer .copyright{
+font-size: 2rem;
+font-weight: lighter;
+padding: 1.5rem;
+}
+footer .copyright span{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* medai etketleri */
+@media(max-width:900px){/* 900 px lin altında gelir üstünde gelmez ikonlar */
+    header {
+        padding: 1.5rem 2rem;
+    }
+    header .icons{
+        display: flex;
+        gap: 1rem;
+    }
+    header .navbar{
+       position: absolute;
+       top: 120%;
+       right: 3%;
+       display: none;
+       flex-direction: column;
+       text-align: center;
+       gap: 3rem;
+       background-color: var(--bg-color);
+       box-shadow:0 0 10px var(--main-color) ;
+       padding: 2rem;
+       border-radius: 10px;
+
+       
+    }
+    header .navbar.active{
+        display: flex;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .home  .content h3{
+        font-size: 4.5rem;
+    }
+    .about .row .content h3{
+    font-size: 2.5rem;
+    }
+    .about .row .content p{
+        font-size: 1.3rem;
+    }
+    .btn-container .btn{
+        width: 100% !important;
+    }
+}
+@media(max-width:600px){
+    html{
+        font-size: 8px;
+    }
+    header .icons i{
+        font-size: 2rem;
+    }
+}
